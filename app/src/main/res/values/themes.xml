@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ExercicoIMC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/fundo</item>
+        <item name="colorPrimary">@color/primaria</item>
+        <item name="colorPrimaryVariant">@color/primaria_variacao</item>
+    </style>
+
+    <style name="Theme.ExercicoIMC" parent="Base.Theme.ExercicoIMC" />
+</resources>

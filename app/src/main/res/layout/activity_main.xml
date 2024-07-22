@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="236dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btn_Calcular"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:text="Calcular IMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_altura" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_altura"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="hint"
+        android:inputType="number"
+        android:padding="8dp"
+        android:text="Digite sua altura ex: 1.58"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_peso" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_peso"
+        android:layout_width="340dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:hint="hint"
+        android:inputType="number"
+        android:padding="8dp"
+        android:text="Digite seu peso ex: 55.75"
+        app:layout_constraintEnd_toEndOf="@+id/edit_altura"
+        app:layout_constraintStart_toStartOf="@+id/edit_altura"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
