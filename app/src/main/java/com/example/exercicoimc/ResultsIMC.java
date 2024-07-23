@@ -33,9 +33,22 @@ public class ResultsIMC extends AppCompatActivity {
 
         double resultado = it.getDoubleExtra("imc", 0.0);
 
-        resultado_imc.setText("IMC: " + resultado);
+        resultado_imc.setText("IMC: " + statusDePeso(resultado) +" "+ resultado);
 
 
 
+    }
+
+    public String statusDePeso(double resultadoPeso ){
+
+        if (resultadoPeso < 18.5){
+            return "Abaixo do peso";
+        }else if(resultadoPeso >= 18.5 && resultadoPeso <= 24.9){
+            return "Peso Normal";
+        }else if(resultadoPeso >= 25.0 && resultadoPeso <= 29.9){
+            return "Sobrepeso";
+        }else {
+            return "Obesidade";
+        }
     }
 }

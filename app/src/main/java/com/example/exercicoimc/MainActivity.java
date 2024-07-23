@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
             if(!peso.toString().isEmpty() && !altura.toString().isEmpty() ){
 
-
                 double imc = calcularImc(altura, peso);
                 intent.putExtra("peso", peso);
                 intent.putExtra("altura", altura);
@@ -59,18 +58,9 @@ public class MainActivity extends AppCompatActivity {
         String formatadoResultado = df.format(resultado);
         resultado = Double.parseDouble(formatadoResultado);
 
-        if (resultado < 18.5){
-            System.out.println("Abaixo do peso");
-        }else if(resultado >= 18.5 && resultado <= 24.9){
-            System.out.println("Peso Normal");
-        }else if(resultado >= 25.0 && resultado <= 29.9){
-            System.out.println("Sobrepeso");
-        }else {
-            System.out.println("Obesidade");
-        }
-
-
         return resultado;
 
     }
+
+
 }
