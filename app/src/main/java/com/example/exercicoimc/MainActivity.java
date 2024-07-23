@@ -54,12 +54,15 @@ public class MainActivity extends AppCompatActivity {
 
     public double calcularImc(double altura, double peso){
         double resultado = peso / (altura * altura);
+        return formatar(resultado);
+    }
+
+    public double formatar(double numero){
         DecimalFormat df = new DecimalFormat("#.#");
-        String formatadoResultado = df.format(resultado);
-        resultado = Double.parseDouble(formatadoResultado);
+        String formatadoResultado = df.format(numero);
+        numero = Double.parseDouble(formatadoResultado);
 
-        return resultado;
-
+        return numero;
     }
 
 
